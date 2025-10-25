@@ -1,0 +1,31 @@
+{
+    // specify environments where code is run
+    "env": {
+        "jest": true,
+        "browser": true
+    },
+
+    // stop eslint from searching for config in parent
+    "root": true,
+
+    // specify parser for TypeScript
+    "parser": "@typescript-eslint/parser",
+
+    // add more rules and config optinos
+    "plugins": ["@typescript-eslint"],
+
+    // extend eslint configs and plugins
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "prettier",
+        "plugin:prettier/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:storybook/recommended"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off"
+    }
+}
