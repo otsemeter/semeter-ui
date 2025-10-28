@@ -1,5 +1,5 @@
 {
-  "name": "semeter-ui",
+  "name": "@{user_name}/semeter-ui",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.cjs.js",
@@ -57,5 +57,8 @@
       "npm run lint",
       "npm run test"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@{USER_NAME}"
   }
 }
