@@ -1,9 +1,8 @@
 name: publish on npm and gpr
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -49,6 +48,3 @@ jobs:
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GITHUB_TOKEN}}
-  
-  publish-npm:
-    needs
