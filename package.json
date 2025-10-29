@@ -1,5 +1,5 @@
 {
-  "name": "@semeter-ui/core",
+  "name": "@otsemeter/semeter-ui",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.cjs.js",
@@ -59,6 +59,6 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@otsemeter/@semeter-ui/core"
+    "registry": "https://npm.pkg.github.com/@otsemeter"
   }
 }
