@@ -59,6 +59,6 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@semeter-ui"
+    "registry": "https://npm.pkg.github.com/@otsemeter"
   }
 }
