@@ -49,6 +49,9 @@ jobs:
           scope: "@otsemeter"
           cache: 'npm'
       - run: npm ci
+      - name: Update package.json name
+        run: sed -i '2,2s/semeter-ui/@otsemeter\/semeter-ui/g' package.json
+      - run: echo registry=https://npm.pkg.github.com/otsemeter >> .npmrc
       - run: npm run build
       - run: npm publish --access public
         env:
