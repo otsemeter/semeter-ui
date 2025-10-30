@@ -31,6 +31,12 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org/
           cache: 'npm'
+      - name: Set version from release tag
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          VERSION="${TAG#v}"
+          echo "Using version $VERSION from tag $TAG"
+          npm version "$VERSION" --no-git-tag-version
       - run: npm ci
       - run: npm run build
       - run: npm publish --access public
@@ -48,6 +54,12 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@otsemeter"
           cache: 'npm'
+      - name: Set version from release tag
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          VERSION="${TAG#v}"
+          echo "Using version $VERSION from tag $TAG"
+          npm version "$VERSION" --no-git-tag-version
       - run: npm ci
       - name: Update package.json name
         run: sed -i '2,2s/semeter-ui/@otsemeter\/semeter-ui/g' package.json
